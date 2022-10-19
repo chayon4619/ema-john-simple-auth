@@ -6,7 +6,7 @@ import './Login.css';
 const Login = () => {
     const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
-    const location = useLocation(); 
+    const location = useLocation();
     const from = location.state?.from?.pathname || '/'
 
     const handleSubmit = event => {
@@ -21,7 +21,7 @@ const Login = () => {
                 const user = result.user;
                 console.log(user);
                 form.reset();
-                navigate(from, {replace: true})
+                navigate(from, { replace: true })
             })
             .catch(error => console.error(error));
     }
